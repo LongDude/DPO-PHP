@@ -1,11 +1,13 @@
 <?php
     // Проверка даты 
     function validateDate($date): bool {
+        // Задание лжет: форматы, отличные от d.m.Y H:i также проходят. Делаем вручную
         // Примитивная проверка на корректность записи даты
         if (!preg_match('/[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4} [0-9]{1,2}\:[0-9]{2}/', $date)) {
             return false;
         };
 
+        // разбиваем дату на элементы, проверяем дату и время отдельно
         list($day, $month, $year, $hour, $minute) = preg_split('/[ \.:]/', $date);
         print("DateValidator costructed date: {$day}.{$month}.{$year} {$hour}:{$minute}\n");
         return checkdate($month, $day, $year) && $hour < 24 && $minute < 60;        
@@ -13,10 +15,12 @@
 
     // Проверка числа
     function validateNumber($number, $n, $m): bool{
+        // Парсим 1 (одно) число
         if (!preg_match("/^-?\d+\$/", $number)){
             print("NumberValidator: invalid number format: {$number}\n");
             return false;
         }
+        // Проверяем по параметрам
         $res = (int)$number >= $n && (int)$number <= $m;
         print("NumberValidator: {$n} < {$number} < {$m}: {$res}\n");
         return $res;
@@ -58,6 +62,7 @@
         }
 
         print_r($elements);
+        // Прогоняем строку в зависимости от указаного валидатора
         $result = match($elements[2]){
             "S" => validateString($elements[1], (int)$elements[3], (int)$elements[4]),
             "N" => validateNumber($elements[1], $elements[3], $elements[4]),
@@ -66,6 +71,7 @@
             "E" => validateEmail($elements[1]),
         };
         
+        // Если строка валидна
         if ($result){
             fwrite($out_file, "OK\n");
         }
