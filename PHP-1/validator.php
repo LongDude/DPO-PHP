@@ -40,7 +40,7 @@
     $task_data = load_test_list($task); 
     $assert = true;
 
-    print_r($task_data);
+    // print_r($task_data);
 
     foreach ($task_data as $task_number => $task_files){
         echo "Test [{$task_number}]...";
