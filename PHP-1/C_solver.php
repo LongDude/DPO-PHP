@@ -1,23 +1,25 @@
 <?php
     // Проверка даты 
     function validateDate($date): bool {
-        
-
-
-        $format = 'j.n.Y H:i';
-        $d = DateTime::createFromFormat($format, $date);
-        if (!$d){
-            print("ValidateDate: Invalid Date Format\n");
+        // Примитивная проверка на корректность записи даты
+        if (!preg_match('/[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4} [0-9]{1,2}\:[0-9]{2}/', $date)) {
             return false;
-        }
-        $formatted_date = $d->format($format);
-        print("ValidateDate formatted date: {$formatted_date}\n");
-        return $formatted_date == $date;
+        };
+
+        list($day, $month, $year, $hour, $minute) = preg_split('/[ \.:]/', $date);
+        print("DateValidator costructed date: {$day}.{$month}.{$year} {$hour}:{$minute}\n");
+        return checkdate($month, $day, $year) && $hour < 24 && $minute < 60;        
     }
 
     // Проверка числа
     function validateNumber($number, $n, $m): bool{
-        return (int)$number >= $n && (int)$number <= $m;
+        if (!preg_match("/^-?\d+\$/", $number)){
+            print("NumberValidator: invalid number format: {$number}\n");
+            return false;
+        }
+        $res = (int)$number >= $n && (int)$number <= $m;
+        print("NumberValidator: {$n} < {$number} < {$m}: {$res}\n");
+        return $res;
     }
 
     // Проверка имени на длину 
@@ -27,7 +29,7 @@
 
     // Провека почты
     function validateEmail($email): bool{
-        $res = preg_match("/[a-zA-Z0-9][a-zA-Z0-9_]{3,29}@[a-zA-Z]{2,30}\.[a-z]{2,10}/", $email);
+        $res = preg_match("/^[a-zA-Z0-9]{1}[a-zA-Z0-9_]{3,29}@[a-zA-Z]{2,30}\.[a-z]{2,10}/", $email);
         print("Validate email result: {$res}\n");
         return $res;
     }
@@ -58,7 +60,7 @@
         print_r($elements);
         $result = match($elements[2]){
             "S" => validateString($elements[1], (int)$elements[3], (int)$elements[4]),
-            "N" => validateNumber((int)$elements[1], (int)$elements[3], (int)$elements[4]),
+            "N" => validateNumber($elements[1], $elements[3], $elements[4]),
             "P" => validatePhone($elements[1]),
             "D" => validateDate($elements[1]),
             "E" => validateEmail($elements[1]),
