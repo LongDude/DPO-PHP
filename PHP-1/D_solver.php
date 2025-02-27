@@ -2,64 +2,50 @@
     function djcstra($graph, $a, $b): int{
         // Рассчитывает самый короткий путь A -> B
 
-        $d = array(); // массив кратчайших путей
-        $pi = array(); // Массив "предшественников"
+        // Маска посещенных вершин
+        $m = array_fill(0, count($graph), false); // Маска посещения вершин
+        $d = array_fill(0, count($graph), INF); // Массив кратчайших путей
+        $d[$a] = 0;
+        
         $Q = new SplPriorityQueue(); // Очередь неоптимизированных узлов
 
-        foreach ($graph as $v => $adj) {
-            $d[$v] = INF; // устанавливаем изначальные расстояния как бесконечность
-            $pi[$v] = null; // никаких узлов позади нет
-            foreach ($adj as $w => $cost) {
-            // воспользуемся ценой связи как приоритетом
-            $Q->insert($w, $cost);
-            }
-        }
-
-        // Начальная дистанция на стартовом узле - 0
-        $d[$a] = 0;
-
+        // наивысший приоритет для корня
+        $Q->insert($a, INF); 
         while (!$Q->isEmpty()){
+            // Выбираем неоптим. вершину с наименьшим путем до цели
             $u = $Q->extract();
-            if (!empty($graph[$u])) {
-                // пройдемся по всем соседним узлам
-                foreach ($graph[$u] as $v => $cost) {
-                // установим новую длину пути для соседнего узла
+
+            if ($m[$u]) continue; // Если для этого узла совершали оптимизацию
+            $m[$u] = true;
+
+            // Перебираем связанные с ней вершины
+            foreach ($graph[$u] as $v => $cost){
                 $alt = $d[$u] + $cost;
-                // если он оказался короче
-                if ($alt < $d[$v]) {
-                    $d[$v] = $alt; // update minimum length to vertex установим как минимальное расстояние до этого узла
-                    $pi[$v] = $u;  // добавим соседа как предшествующий этому узла
+                // Уменьшаем стоимость если возможно
+                if ($alt < $d[$v]){
+                    $d[$v] = $alt;
                 }
+                // Добавляем в очередь оптимизации, если не посещали ранее
+                if (!$m[$v]) {
+                    $Q->insert($v, -$d[$v]);
                 }
             }
         }
 
-        // теперь мы можем найти минимальный путь
-        // используя обратный проход
-        $S = new SplStack(); // кратчайший путь как стек
-        $u = $b;
-        $dist = 0;
-        // проход от целевого узла до стартового
-        while (isset($pi[$u]) && $pi[$u]) {
-        $S->push($u);
-        $dist += $graph[$u][$pi[$u]]; // добавим дистанцию для предшествующих
-        $u = $pi[$u];
-        }
-        print_r($S);
-        return $S->isEmpty() ? -1 : $dist;
+        return $m[$b] ? $d[$b] : -1;
     }
 
     // Чтение входных данный
-    $input_lines = fopen('input.txt', 'r');
+    $in_file = fopen('input.txt', 'r');
     $out_file = fopen('output.txt', 'w');
 
     // Параметры размера сети
-    list($n, $m) = explode(' ', $input_lines.readline());
+    list($n, $m) = explode(' ', trim(fgets($in_file)));
 
     // Граф сети
     $graph = array_fill(0, $n, array());
     for ($i = 0; $i < $m; $i++){
-        list($a, $b, $l) = explode(' ', $input_lines.readline());
+        list($a, $b, $l) = explode(' ', trim(fgets($in_file)));
 
         $graph[$a] += [$b => $l];
         $graph[$b] += [$a => $l];
@@ -67,22 +53,26 @@
     print_r($graph);
 
     // Запросы
-    for ($i = 0; $i < $m; $i ++){
-        list($a, $b, $r) = explode(' ', $input_lines.readline());
+    $k = (int)fgets($in_file);
+    for ($i = 0; $i < $k; $i ++){
+        list($a, $b, $r) = explode(' ', trim(fgets($in_file)));
         
         switch($r){
             case '?': {
                 $l = djcstra($graph, $a, $b);
                 fwrite($out_file, "$l\n");
+                break;
             }
             case '-1': {
                 unset($graph[$a][$b]);
                 unset($graph[$b][$a]);
+                break;
             }
             default: {
                 // Для положительных чисел
-                $graph[$a][$b] = $l;
-                $graph[$b][$a] = $l;
+                $graph[$a][$b] = $r;
+                $graph[$b][$a] = $r;
+                break;
             }
         }
     }
