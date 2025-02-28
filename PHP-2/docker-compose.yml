@@ -18,14 +18,14 @@ services:
       - ./.env
     user: postgres
     environment: 
-      POSTGRES_DB: "lab2-db"
+      POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - postgres:/var/lib/postgresql/data
       - ./bd/migrations:/docker-entrypoint-initdb.d
-    expose:
-      - '5432'
+    ports:
+      - 5432:5432
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -d lab2-db -U $$POSTGRES_USER"]
       interval: 30s
