@@ -1,3 +1,4 @@
 **/bd/secrets/*
 !**/bd/secrets
 bddata
+.env

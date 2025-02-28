@@ -5,6 +5,8 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "80:80"
+    env_file:
+      - ./.env
     volumes:
       - ./app:/var/www/html
     depends_on:
@@ -12,25 +14,25 @@ services:
   
   db:
     image: postgres:16-alpine
+    env_file:
+      - ./.env
+    user: postgres
     environment: 
       POSTGRES_DB: "lab2-db"
-      POSTGRES_USER_FILE: /run/secrets/db_user
-      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - postgres:/var/lib/postgresql/data
       - ./bd/migrations:/docker-entrypoint-initdb.d
     expose:
       - '5432'
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -d lab2-db"]
+      test: ["CMD-SHELL", "pg_isready -d lab2-db -U $$POSTGRES_USER"]
       interval: 30s
       timeout: 60s
       retries: 5
       start_period: 30s
     restart: unless-stopped
-    secrets: 
-      - db_user
-      - db_password
   
   pgadmin:
     container_name: pgadmin
@@ -50,8 +52,3 @@ volumes:
   pgadmin:
   postgres:
 
-secrets:
-  db_password:
-    file: bd/secrets/db-password.txt
-  db_user:
-    file: bd/secrets/db-user.txt
