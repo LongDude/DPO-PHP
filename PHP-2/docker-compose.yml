@@ -1,0 +1,44 @@
+services:
+  web:
+    build:
+      context: ./app
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:16-alpine
+    environment: 
+      POSTGRES_USER: /run/secrets/db_user
+      POSTGRES_PASSWORD: /run/secrets/db_password
+      PGDATA: /bddata
+    volumes:
+      - ./bd/bddata:/bddata
+      - ./bd/migrations:/docker-entrypoint-initdb.d
+    expose:
+      - '5432'
+    restart: always
+    secrets: 
+      - db_user
+      - db_password
+  
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: rootpass
+    depends_on:
+      - db
+
+secrets:
+  db_password:
+    file: bd/secrets/db-password.txt
+  db_user:
+    file: bd/secrets/db-user.txt
