@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <main>
+        <form>
+            <div>
+                <label for="fullname" class="lbl-input">ФИО: </label>
+                <input type="text" placeholder="Иванов Иван Иванович" name="fullname" id="inp-fullname">
+                <label for="fullname" class="lbl-inp-err" hidden>Имя в формате: Фамилия Имя Отчество</label>
+            </div>
+            <div>
+                <label for="email" class="lbl-input">Почтовый адрес: </label>
+                <input type="email" placeholder="test@mail.com" name="email" id="inp-email">
+                <label for="email" class="lbl-inp-err" hidden>Некорреткный формат почты</label>
+            </div>
+            <div>
+                <label for="phone" class="lbl-input">Телефон: </label>
+                <input type="text" placeholder="+7 (999) 999-99-99" name="phone" id="inp-phone">
+                <label for="phone" class="lbl-inp-err" hidden>Некорректный номер</label>
+            </div>
+            <div>z
+                <label for="comment" class="lbl-input">Комментарий</label>
+                <input type="text" placeholder="Комментарий" name="comment" id="inp-comment">
+                <label for="comment" class="lbl-inp-err" hidden>Не может быть пустым, до 255 символов</label>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

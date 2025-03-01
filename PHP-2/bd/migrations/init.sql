@@ -1,5 +1,7 @@
-create table if not exists people (
+create table if not exists feedback (
     id serial primary key,
-    name varchar(100),
-    age int
+    fullname varchar(100),
+    email varchar(100),
+    phone varchar(100),
+    comment varchar(256),
 )

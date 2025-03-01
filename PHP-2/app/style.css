@@ -1,0 +1,27 @@
+* {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+}
+
+.bg-image {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    background-image: url("img/bg.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: sepia() blur(10px) hue-rotate(150deg);
+}
+
+main {
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
