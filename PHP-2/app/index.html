@@ -4,35 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Обратная связь</title>
 </head>
 <body>
     <div class="bg-image"></div>
     <main>
-        <form>
+        <form id="request-form">
             <div>
-                <label for="fullname" class="lbl-input">ФИО: </label>
-                <input type="text" placeholder="Иванов Иван Иванович" name="fullname" id="inp-fullname">
-                <label for="fullname" class="lbl-inp-err" hidden>Имя в формате: Фамилия Имя Отчество</label>
-            </div>
-            <div>
-                <label for="email" class="lbl-input">Почтовый адрес: </label>
-                <input type="email" placeholder="test@mail.com" name="email" id="inp-email">
-                <label for="email" class="lbl-inp-err" hidden>Некорреткный формат почты</label>
+                <label for="fullname" class="lbl-input roboto-info-labels">ФИО: </label>
+                <input type="text" placeholder="Иванов Иван Иванович" name="fullname" id="inp-fullname" class="roboto-info-input" maxlength="128">
+                <label for="fullname" class="roboto-error">Имя в формате: Фамилия Имя Отчество</label>
             </div>
             <div>
-                <label for="phone" class="lbl-input">Телефон: </label>
-                <input type="text" placeholder="+7 (999) 999-99-99" name="phone" id="inp-phone">
-                <label for="phone" class="lbl-inp-err" hidden>Некорректный номер</label>
+                <label for="email" class="lbl-input roboto-info-labels">Почтовый адрес: </label>
+                <input type="email" placeholder="test@mail.com" name="email" id="inp-email" class="roboto-info-input">
+                <label for="email" class="roboto-error">Некорреткный формат почты</label>
             </div>
-            <div>z
-                <label for="comment" class="lbl-input">Комментарий</label>
-                <input type="text" placeholder="Комментарий" name="comment" id="inp-comment">
-                <label for="comment" class="lbl-inp-err" hidden>Не может быть пустым, до 255 символов</label>
+            <div>
+                <label for="phone" class="lbl-input roboto-info-labels">Телефон: </label>
+                <input type="text" placeholder="+7 (999) 999-99-99" name="phone" id="inp-phone" class="roboto-info-input">
+                <label for="phone" class="roboto-error">Некорректный номер</label>
             </div>
-            <button type="submit">Отправить</button>
+            <div>
+                <label for="comment" class="lbl-input roboto-info-labels">Комментарий:</label>
+                <textarea type="text" placeholder="Комментарий" name="comment" id="inp-comment" rows="5" maxlength="255" class="roboto-info-input"></textarea>
+                <label for="comment" class="roboto-error">Не может быть пустым, до 255 символов</label>
+            </div>
+            <button type="submit" id="btn-submit" class="roboto-submit" disabled>Отправить</button>
         </form>
     </main>
+    <template id="response-form">
+        <form>    
+            <h2></h2>
+            <div class="record">
+                <p>Имя:</p><span></span>
+                <p>Фамилия:</p><span></span>
+                <p>Отчество:</p><span></span>
+                <p>E-mail:</p><span></span>
+                <p>Телефон:</p><span></span>
+                <p>Комментарий:</p><span></span>
+            </div>
+            <h3></h3>
+        </form>
+    </template>
 </body>
 <script src="script.js"></script>
 </html>

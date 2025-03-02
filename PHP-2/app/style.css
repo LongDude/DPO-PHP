@@ -1,3 +1,43 @@
+.roboto-info-labels {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.roboto-info-input {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.roboto-error {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 0.8rem;
+    font-style: oblique;
+    font-variation-settings:
+      "wdth" 100;
+    color: red;
+    visibility: hidden;
+}
+
+.roboto-submit {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: oblique;
+    font-variation-settings:
+      "wdth" 100;
+}
+
 * {
     box-sizing: content-box;
     padding: 0;
@@ -24,4 +64,92 @@ main {
     justify-content: center;
     align-items: center;
 
+}
+
+form {
+    background-color: rgba(104, 235, 247, 0.5);
+    padding: 20px;
+    border: 2px solid rgb(99, 199, 208);
+    border-radius: 20px;
+    -webkit-box-shadow: 4px 4px 20px -4px rgba(27, 128, 206, 0.5);
+    -moz-box-shadow: 4px 4px 20px -4px rgba(27, 128, 206, 0.5);
+    box-shadow: 4px 4px 20px -4px rgba(27, 128, 206, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    display: block;
+    resize: none;
+    width: 100%;
+}
+
+form div {
+    display: block;
+}
+
+.lbl-inp-err {
+    visibility: visible !important;
+}
+
+#btn-submit {
+    margin-top: 10px;
+    box-shadow: none;
+    border: none;
+    background-color: rgb(99, 199, 208);
+    padding: 2px;
+    border-radius: 4px;
+}
+
+#btn-submit:hover {
+    background-color: rgb(56, 179, 190);
+
+}
+
+#btn-submit:focus {
+    background-color: rgb(104, 235, 247);
+}
+
+.input-error {
+    border: 1px solid red;
+    color: red;
+}
+
+h2 {
+    all: unset;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: "Roboto", serif;
+}
+
+.record {
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 2px 5px;
+}
+.record p {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.record span {
+    font-weight: 500;
+    font-style: oblique;
+}
+
+
+
+h3 {
+    all: unset;
+    font-size: 1.0rem;
+    font-weight: 500;
+    font-family: "Roboto", serif;
+    font-style: oblique;
 }

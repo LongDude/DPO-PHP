@@ -1,15 +1,17 @@
 <?php
-// Define recipient, subject, message, and headers
-$to = 'teplov.vladimir.2004@mail.ru';
-$subject = 'Test Mail';
-$message = 'Hello, this is a test mail from PHP script.';
-$headers = 'From: sender@example.com' . "\r\n" .
-           'Reply-To: sender@example.com' . "\r\n" .
-           'X-Mailer: PHP/' . phpversion();
- 
-// Send the email
-if(mail($to, $subject, $message, $headers)) {
-    echo "Mail sent successfully!";
-} else {
-    echo "Failed to send mail.";
-}
+        $to = 'test@mail.com';
+        $subject = 'Оставленная заявка';
+        $message = "Вами была оставлена заявка со следующим содержанием:\n
+            Имя: name\n
+            Фамилия: surname\n
+            Отчество: patronymic\n
+            Номер телефона: phone\n
+            Почтовый адрес: email\n
+            Комментарий: comment\n
+            С вами свяжутся после response_date
+        ";
+        $headers = 'From: sender@example.com' . "\r\n" .
+                'Reply-To: sender@example.com' . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
+        mail($to, $subject, $message, $headers);
+            
