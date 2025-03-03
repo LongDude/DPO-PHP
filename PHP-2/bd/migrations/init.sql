@@ -1,4 +1,3 @@
-create database if not exists "lab2-db";
 ALTER database "lab2-db" SET TIMEZONE to 'Europe/Moscow';
 
 create table if not exists feedback (
