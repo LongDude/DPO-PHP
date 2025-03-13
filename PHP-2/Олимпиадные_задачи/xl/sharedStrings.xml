@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="59" uniqueCount="59"><si><t>Задача А</t></si><si><t>FDC2F39C        21.01.2018 10:44:23
+SKLJF234        21.01.2018 10:51:18
+FDC2F39C        21.01.2018 11:02:55</t></si><si><t>2 FDC2F39C 21.01.2018 11:02:55
+1 SKLJF234 21.01.2018 10:51:18</t></si><si><t>FDC2F39C        21.01.2018 10:44:23</t></si><si><t>1 FDC2F39C 21.01.2018 10:44:23</t></si><si><t>FDC2F39C        21.01.2018 10:44:23
+SKLJF234        21.01.2018 10:51:18
+FDC2F39C        21.01.2018 11:02:55
+FDC2F39C        21.01.2018 10:40:23
+SKLJF234        21.01.2018 10:53:18
+FDC2F39C        21.01.2018 11:11:55
+FDC2F39C        11.01.2018 10:44:23
+SKLJF234        12.01.2018 10:51:18
+FDC2F39C        21.03.2018 11:02:55
+FDC2F39C        21.01.2017 10:44:23
+SKLJF234        21.01.2017 10:51:18
+FDC2F39C        21.01.2017 11:02:55
+FDC2F39C        21.01.2019 10:44:23
+SKLJF234        21.01.2019 10:51:18
+FDC2F39C        21.01.2019 11:02:55</t></si><si><t>10 FDC2F39C 21.01.2019 11:02:55
+5 SKLJF234 21.01.2019 10:51:18</t></si><si><t>FDC2F391        21.02.2018 10:44:00
+FDC2F392        21.03.2018 10:44:23
+FDC2F393        21.01.2018 10:11:23
+FDC2F394        21.04.2018 12:14:23
+FDC2F395        21.05.2018 13:44:23
+FDC2F396        21.06.2018 10:15:23
+FDC2F390        21.07.2018 14:44:23
+FDC2F397        21.08.2018 18:44:23
+FDC2F398        21.09.2018 22:44:23
+FDC2F399        21.03.2018 09:44:23
+FDC2F39B        21.02.2018 06:44:23
+FDC2F39C        21.10.2018 19:44:23</t></si><si><t>1 FDC2F391 21.02.2018 10:44:00
+1 FDC2F392 21.03.2018 10:44:23
+1 FDC2F393 21.01.2018 10:11:23
+1 FDC2F394 21.04.2018 12:14:23
+1 FDC2F395 21.05.2018 13:44:23
+1 FDC2F396 21.06.2018 10:15:23
+1 FDC2F39 21.07.2018 14:44:23
+1 FDC2F397 21.08.2018 18:44:23
+1 FDC2F398 21.09.2018 22:44:23
+1 FDC2F399 21.03.2018 09:44:23
+1 FDC2F3910 21.02.2018 06:44:23
+1 FDC2F3911 21.10.2018 19:44:23</t></si><si><t>Задача В</t></si><si><t>10 Рыбалка 1 10
+11 Лодки 2 7
+12 Удочки 8 9
+13 Raffer 3 4
+14 Waterman 5 6</t></si><si><t>Рыбалка
+-Лодки
+--Raffer
+--Waterman
+-Удочки</t></si><si><t>10 Рыбалка 1 2</t></si><si><t>Рыбалка</t></si><si><t>10 Рыбалка 1 4
+11 Лодки 2 3</t></si><si><t>Рыбалка
+-Лодки</t></si><si><t>10 Рыбалка 1 4
+11 Лодки 2 3
+1 Охота 5 8
+2 Ружья 6 7</t></si><si><t>Рыбалка
+-Лодки
+Охота
+-Ружья</t></si><si><t>387 Водомоторика 101 122
+388 Рыбалка 1 70
+395 ОдеждаИОбувь 21 22
+400 Прикормки 31 32
+401 Катушки 13 14
+403 Удилища 11 12
+428 Туризм 71 100
+429 ПалаткиИШатры 73 74
+473 ЗимняяРыбалка 9 10
+476 Доставка 123 124
+480 ЛескаИШнуры 19 20
+481 РыболовныеНаборы 5 6
+482 ПодаркиРыболовам 7 8
+483 Контакты 125 126
+487 Приманки 15 16
+488 ЖиваяНасадка 29 30
+490 Аксессуары 25 26
+501 СпальныеМешки 75 76
+502 Коврики 77 78
+503 СумкиИРюкзаки 81 82
+504 ПосудаИСтоловыеПриборы 83 84
+506 КемпинговаяМебель 79 80
+507 ТермосыИТермокружки 85 86
+509 Фонари 95 96
+510 Электричество 97 98
+511 ГазовоеОборудование 87 88
+512 СредстваОтКомаров 93 94
+513 Мангалы,Коптильни 89 90
+514 Аксессуары 91 92
+517 Лодки 111 112
+518 БензиновыеМоторы 105 106
+519 Электромоторы 115 116
+520 КомплектыЛодка+Мотор 109 110
+521 Электроника 117 118
+522 Аксессуары 103 104
+524 Якоря 119 120
+525 Гермосумки 107 108
+526 Спасжилеты 113 114
+1374 ГлавноеМеню 2 33
+1378 ОсновноеМеню 72 99
+1379 ГлавноеМеню 102 121
+1390 ПоВидамЛовли 34 47
+1391 ЛовляНаСпиннинг 39 40
+1392 ПоплавочнаяУдочка 45 46
+1393 ЛовляНаФидер 41 42
+1394 Карпфишинг 37 38
+1395 Нахлыст 43 44
+1396 Джеркбейт 35 36
+2797 ПоВидамРыб 48 69
+2798 ЛовляЩуки 67 68
+2799 ЛовляОкуня 57 58
+2800 ЛовляСудака 63 64
+2801 ЛовляГолавля 49 50
+2802 ЛовляФорели 65 66
+2803 ЛовляКарася 51 52
+2804 ЛовляКарпаИСазана 53 54
+2805 ЛовляЛеща 55 56
+2806 ЛовляПлотвы 59 60
+2808 ЛовляСома 61 62
+2850 Оснастка 17 18
+2851 Снаряжение 23 24
+3766 Ароматика 27 28
+13170 ЗимняяРыбалка 3 4</t></si><si><t>Рыбалка
+-ГлавноеМеню
+--ЗимняяРыбалка
+--РыболовныеНаборы
+--ПодаркиРыболовам
+--ЗимняяРыбалка
+--Удилища
+--Катушки
+--Приманки
+--Оснастка
+--ЛескаИШнуры
+--ОдеждаИОбувь
+--Снаряжение
+--Аксессуары
+--Ароматика
+--ЖиваяНасадка
+--Прикормки
+-ПоВидамЛовли
+--Джеркбейт
+--Карпфишинг
+--ЛовляНаСпиннинг
+--ЛовляНаФидер
+--Нахлыст
+--ПоплавочнаяУдочка
+-ПоВидамРыб
+--ЛовляГолавля
+--ЛовляКарася
+--ЛовляКарпаИСазана
+--ЛовляЛеща
+--ЛовляОкуня
+--ЛовляПлотвы
+--ЛовляСома
+--ЛовляСудака
+--ЛовляФорели
+--ЛовляЩуки
+Туризм
+-ОсновноеМеню
+--ПалаткиИШатры
+--СпальныеМешки
+--Коврики
+--КемпинговаяМебель
+--СумкиИРюкзаки
+--ПосудаИСтоловыеПриборы
+--ТермосыИТермокружки
+--ГазовоеОборудование
+--Мангалы,Коптильни
+--Аксессуары
+--СредстваОтКомаров
+--Фонари
+--Электричество
+Водомоторика
+-ГлавноеМеню
+--Аксессуары
+--БензиновыеМоторы
+--Гермосумки
+--КомплектыЛодка+Мотор
+--Лодки
+--Спасжилеты
+--Электромоторы
+--Электроника
+--Якоря
+Доставка
+Контакты</t></si><si><t>10 Рыбалка 1 2
+11 Охота 3 4
+12 Туризм 5 6</t></si><si><t>Рыбалка
+Охота
+Туризм</t></si><si><t>1 раздел1 1 14
+2 раздел2 2 13
+3 раздел3 3 12
+4 раздел4 4 11
+5 раздел5 5 10
+6 раздел6 6 9
+7 раздел7 7 8
+10 раздел10 15 26
+11 раздел11 16 25
+12 раздел12 17 24
+13 раздел13 18 23
+14 раздел14 19 22
+15 раздел15 20 21</t></si><si><t>раздел1
+-раздел2
+--раздел3
+---раздел4
+----раздел5
+-----раздел6
+------раздел7
+раздел10
+-раздел11
+--раздел12
+---раздел13
+----раздел14
+-----раздел15</t></si><si><t>Задача C</t></si><si><t>A 1
+B 2
+C 3
+D 4</t></si><si><t xml:space="preserve">A 0.099473
+B 0.199976
+C 0.299613
+D 0.400938
+</t></si><si><t>sdfgs 5
+ghkig 4
+qweq 2
+cvn 10
+sdhfgh 15
+d 100
+dsfgs 44
+ewwe 23</t></si><si><t>sdfgs 0.024560
+ghkig 0.019717
+qweq 0.009725
+cvn 0.049029
+sdhfgh 0.073514
+d 0.493886
+dsfgs 0.216471
+ewwe 0.113098</t></si><si><t>a 10</t></si><si><t>a 1.000000</t></si><si><t>a 10
+b 10</t></si><si><t>a 0.499668
+b 0.500332</t></si><si><t>a 1
+b 1
+c 1
+d 1
+e 1</t></si><si><t>a 0.200580
+b 0.200016
+c 0.200020
+d 0.199834
+e 0.199550</t></si><si><t>aad 2
+asdfa 3
+ssd 10
+sdgsd 99
+ffhfd 15
+sss 66
+dscy 50
+kklkl 33
+oit 7
+ddd 33
+dsa 3
+ppl 56
+ieiru 23
+orof 35
+ssdv 8</t></si><si><t>aad 0.004455
+asdfa 0.006792
+ssd 0.022726
+sdgsd 0.222571
+ffhfd 0.034153
+sss 0.148794
+dscy 0.113086
+kklkl 0.074387
+oit 0.016059
+ddd 0.074704
+dsa 0.006766
+ppl 0.126475
+ieiru 0.051867
+orof 0.079097
+ssdv 0.018068</t></si><si><t>Задача D</t></si><si><t xml:space="preserve">/*комментарий */
+#id {
+    color: #AAFF22;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.red,
+.warn {color: #FF0000;}
+.empty &gt; .style {}
+</t></si><si><t>#id{color:#AF2;margin:0}.red,.warn{color:red}</t></si><si><t>/*комментарий */
+#id {
+    color: #FFAA00;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px; /*убираем левый отступ*/
+}
+.red,
+.warn {color: #FF0000;}
+.peru {
+        color: #CD853F;
+}
+.pink {
+        color: #FFC0CB;
+}
+.plum {
+        color: #DDA0DD;
+}
+.snow {
+        color: #FFFAFA;
+}
+.tan {
+        color: #D2B48C;
+}</t></si><si><t>#id{color:#FA0;margin-top:0;margin-bottom:0;margin-left:0}.red,.warn{color:red}.peru{color:peru}.pink{color:pink}.plum{color:plum}.snow{color:snow}.tan{color:tan}</t></si><si><t xml:space="preserve">#id {
+    color: #ffffff;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+</t></si><si><t>#id{color:#fff;margin:4px 10px 2px 0}</t></si><si><t xml:space="preserve">#id {
+    /*color: #ffffff;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 10px;*/
+}
+</t></si><si><t>.ui-product-elements__product-equal {
+  width: 29px;
+  height: 29px;
+  padding-top: 4px;
+  padding-left: 3px;
+  color: #9FA1A1;
+  font-size: 1.2em;
+  border: 2px solid #9FA1A1;
+  border-radius: 25px;
+  right: 0; }
+.ui-product-elements__product-equal a.compare-click {
+  display: block;
+  margin-top: -19px;
+  margin-left: -3px;
+  position: absolute;
+}
+.ui-product-elements__product-equal:hover {
+  color: #ffffff;
+  background-color: #006564;
+  border: 2px solid #006564;
+  cursor: pointer;
+}
+.tovar-detail__row-1 .ui-product-elements__product-equal.active {
+  color: inherit;
+  background: none;
+  border: none;
+}
+.tovar-detail__row-1 .ui-product-elements__product-equal.active a {
+  text-decoration: none;
+}
+.tovar-detail__row-1 .ui-product-elements__product-equal.active a i.fa {
+  color: #ffffff;
+  background-color: #006564;
+  border: 2px solid #006564;
+}
+.tovar-detail__row-1 .ui-product-elements__product-equal:hover {
+  color: inherit;
+  background: none;
+  border: none;
+}
+.tovar-detail__row-1 .ui-product-elements__product-equal a i.fa {
+  margin-right: 15px;
+  padding: 5px 4px 4px 3.5px;
+  border: 2px solid #9FA1A1;
+  color: #9FA1A1;
+  border-radius: 25px;
+  width: 29px;
+  height: 29px;
+  font-size: 1.1em;
+}
+.tovar-detail__row-1 .ui-product-elements__product-equal a i.fa:hover {
+  color: #ffffff;
+  background-color: #006564;
+  border: 2px solid #006564;
+  cursor: pointer;
+}
+.tovar-detail__row-1 .ui-product-elements .ui-product-elements__product-equal {
+  border: none;
+  padding-left: 0;
+  padding-top: 0;
+}</t></si><si><t>.ui-product-elements__product-equal{width:29px;height:29px;padding-top:4px;padding-left:3px;color:#9FA1A1;font-size:1.2em;border:2px solid #9FA1A1;border-radius:25px;right:0}.ui-product-elements__product-equal a.compare-click{display:block;margin-top:-19px;margin-left:-3px;position:absolute}.ui-product-elements__product-equal:hover{color:#fff;background-color:#006564;border:2px solid #006564;cursor:pointer}.tovar-detail__row-1 .ui-product-elements__product-equal.active{color:inherit;background:none;border:none}.tovar-detail__row-1 .ui-product-elements__product-equal.active a{text-decoration:none}.tovar-detail__row-1 .ui-product-elements__product-equal.active a i.fa{color:#fff;background-color:#006564;border:2px solid #006564}.tovar-detail__row-1 .ui-product-elements__product-equal:hover{color:inherit;background:none;border:none}.tovar-detail__row-1 .ui-product-elements__product-equal a i.fa{margin-right:15px;border:2px solid #9FA1A1;color:#9FA1A1;border-radius:25px;width:29px;height:29px;font-size:1.1em;padding:5px 4px 4px 3.5px}.tovar-detail__row-1 .ui-product-elements__product-equal a i.fa:hover{color:#fff;background-color:#006564;border:2px solid #006564;cursor:pointer}.tovar-detail__row-1 .ui-product-elements .ui-product-elements__product-equal{border:none;padding-left:0;padding-top:0}</t></si><si><t xml:space="preserve">/*комментарий */
+#id {
+    color: #AAFF22;
+    padding-top: 1px;
+    padding-bottom:10px;
+    padding-left: 0px;
+    padding-right: 5px;
+}
+.red,
+.warn {color: #FF0000;}
+.empty &gt; .style {/*тут будут стили*/}
+</t></si><si><t>#id{color:#AF2;padding:1px 5px 10px 0}.red,.warn{color:red}</t></si><si><t xml:space="preserve">html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #ffffff;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 300; }
+
+h2, h4, h5, h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px; }
+
+h2 {
+  font-size: 18px; }
+</t></si><si><t>html,body{width:100%;height:100%}body{background:#fff;font-family:Roboto,sans-serif;font-size:16px;font-weight:300}h2,h4,h5,h6{font-size:14px;font-weight:600;margin-bottom:15px}h2{font-size:18px}</t></si><si><t>.ui-tabs {
+  padding: 0; }
+.mobile-nav-select.input-container {
+  /*display: block;*/
+  margin-bottom: 20px; }
+.mobile-nav-select.input-container.bordered {
+  background-color: #ff5533;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #bbeeee; }
+.mobile-nav-select.input-container.wide {
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.mobile-nav-select.input-container .custom-select .jq-selectbox__select {
+  background-color: #ffffff;
+  color: #006564;
+  font-weight: 600; }</t></si><si><t>.ui-tabs{padding:0}.mobile-nav-select.input-container{margin-bottom:20px}.mobile-nav-select.input-container.bordered{background-color:#f53;border-top:1px solid #eee;border-bottom:1px solid #bee;padding:20px 0}.mobile-nav-select.input-container.wide{margin-left:-10px;margin-right:-10px;padding-top:10px;padding-bottom:10px}.mobile-nav-select.input-container .custom-select .jq-selectbox__select{background-color:#fff;color:#006564;font-weight:600}</t></si><si><t>.ui-tabs {
+  padding: 0px;
+}
+.mobile-nav-select.input-container {
+  /*display: block;*/
+  margin-bottom: 20px;/*отступ*/
+
+}
+
+.mobile-nav-select.input-container.bordered {
+  background-color: #ff5533;
+  padding: 20px 0px;
+  border-top: 1px solid #CD853F;
+  border-bottom: 1px solid #bbe1ee;
+
+
+}
+.mobile-nav-select.input-container.wide {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+
+/*стиль*/
+.mobile-nav-select.input-container .custom-select .jq-selectbox__select {
+  background-color: #DDA0DD;
+  color: #D2B48C;
+  font-weight: 600;
+
+  }</t></si><si><t>.ui-tabs{padding:0}.mobile-nav-select.input-container{margin-bottom:20px}.mobile-nav-select.input-container.bordered{background-color:#f53;border-top:1px solid peru;border-bottom:1px solid #bbe1ee;padding:20px 0}.mobile-nav-select.input-container.wide{margin:10px -10px}.mobile-nav-select.input-container .custom-select .jq-selectbox__select{background-color:plum;color:tan;font-weight:600}</t></si><si><t>.mobile-nav-select.input-container.wide {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+#id {
+  padding-left: 10px;
+  padding-right: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}</t></si><si><t>.mobile-nav-select.input-container.wide{padding:10px}#id{padding:10px 9px 10px 10px}</t></si><si><t>.mobile-nav-select.input-container {
+  /*display: block;*/
+  margin-bottom: 20px; }
+.mobile-nav-select.input-container.wide {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 9px;
+
+}</t></si><si><t>.mobile-nav-select.input-container{margin-bottom:20px}.mobile-nav-select.input-container.wide{padding:10px 10px 9px}</t></si></sst>
