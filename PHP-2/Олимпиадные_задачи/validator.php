@@ -10,7 +10,7 @@
     include 'D_solver.php';
 
     // $task = null;
-    $task = 'D'; // все еще не могу считывать ввод в дебаггере
+    $task = null; // все еще не могу считывать ввод в дебаггере
     while(!$task){
         $task = readline("Введите номер задачи: ");
         if (!in_array($task, ['A', 'B', 'C', 'D'])){
