@@ -1,0 +1,10 @@
+services:
+  web:
+    image: php:8.2-apache
+    ports:
+      - "80:80"
+    env_file:
+      - ./.env
+    volumes:
+      - ./app:/var/www/html
+  
