@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Main Page{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Main Page</h1>
+    
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <div class="authenticated-options">
+            <p>Welcome, {{ app.user.email }}!</p>
+            <ul>
+                <li><a href="{{ path('app_logout') }}">Logout</a></li>
+                <li>Option 1 for authenticated users</li>
+                <li>Option 2 for authenticated users</li>
+            </ul>
+        </div>
+    {% else %}
+        <p>This is the public view of the main page.</p>
+        <a href="{{ path('app_login') }}">Login to see more options</a>
+    {% endif %}
+{% endblock %}
