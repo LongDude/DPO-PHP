@@ -55,8 +55,7 @@ class SessionController extends AbstractController
         if ($request->isMethod('POST')) {
             $user = new User();
             $user->setEmail($request->request->get('email'));
-            $user->setUsername($request->request->get('username'));
-            $user->setPassword($passwordHasher->hashPassword($user, $request->request->get('username')));
+            $user->setPassword($passwordHasher->hashPassword($user, $request->request->get('password')));
             $user->setRoles(['ROLE_USER']);
 
             $entityManager->persist($user);

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+body {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+:root{
+    /* --color-primary: #FBDB93; */
+    --color-primary: rgba(251, 219, 147);
+    --color-primary-accent: #BE5B50;
+    --color-secondary: #8A2D3B;
+    --color-secondary-accent: #641B2E;
+
+    --color-primary-frame-main: #641B2E;
+    --color-primary-frame-text:#FBDB93;
+    --color-primary-frame-hover:#BE5B50;
+}
+
+.bg-image {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+    background-image: url("/img/bg.jpeg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: sepia() blur(10px) hue-rotate(0deg);
+}
+
+.bg-color {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: rgba(251, 219, 147, 0.8);
+}
+
+
+
+.round_elements_row_frame {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+}
+
+
+.frame-elem {
+    all: unset;
+    display: inline-block;
+    height: 100%;
+    background-color: var(--color-primary-frame-main);
+    color: var(--color-primary-frame-text);
+    font-size: 1rem;
+    align-content: center;
+}
+
+.frame-elem:not(:has(span)):hover {
+    background-color: var(--color-primary-frame-hover);
+    color: var(--color-primary-frame-text);
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--color-primary-frame-text) !important; 
+}
+
+
+.round_elements_row_frame >:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+}
+.round_elements_row_frame >:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px;
+
+}
+
+.frame-elem *{
+    color: var(--color-primary-frame-text);
+    display: inline-block;
+    padding: 0px 4px;
+}
+.round_elements_row_frame .frame-elem:not(:last-child) *{
+    border-right: 2px solid var(--color-primary-frame-text);
+}
+
+

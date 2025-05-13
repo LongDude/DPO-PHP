@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover{
+    color: var(--color-secondary-accent) !important;
+}
+
+/* form {
+    display: grid;
+    grid-template-areas: 'h1 h1' 'lbl1 inp1' 'lbl2 inp2' 'btns btns';
+    gap: 10px;
+}
+
+h1 {
+    grid-area: h1;
+}
+
+label:nth-child(0) {grid-area: lbl1;}
+label:nth-child(1) {grid-area: lbl2;}
+
+input:nth-child(0) {grid-area: inp1;}
+input:nth-child(1) {grid-area: inp2;} */
+/* 
+.round_elements_row_frame{
+    grid-area: btns;
+    margin: 4px;
+}
+.frame-elem * {
+    padding: 0px 8px;
+}
+
+button {
+    all: unset;
+} */

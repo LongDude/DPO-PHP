@@ -1,21 +1,120 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Main Page{% endblock %}
+{% block title %}Библиотека
+{% endblock %}
+
+{% block imports %}
+    <link rel="stylesheet" href="/css/mainpage.css">
+    <link rel="stylesheet" href="/css/articles.css">
+    <link rel="stylesheet" href="/css/book_form.css">
+    <script src="/js/main_script.js" defer></script>
+{% endblock %}
+
 
 {% block body %}
-    <h1>Welcome to the Main Page</h1>
-    
-    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        <div class="authenticated-options">
-            <p>Welcome, {{ app.user.email }}!</p>
-            <ul>
-                <li><a href="{{ path('app_logout') }}">Logout</a></li>
-                <li>Option 1 for authenticated users</li>
-                <li>Option 2 for authenticated users</li>
-            </ul>
+	<header id="site-top">
+		{% if user_roles is defined and user_roles is not null %}
+			<button id="add-book">Добавить книгу</button>
+			<div class="round_elements_row_frame">
+				<div class="frame-elem">
+					<span class="email">{{user_email}}</span>
+				</div>
+				<div class="frame-elem">
+					<span class="role">
+						{% if 'ROLE_ADMIN' in user_roles %}
+							АДМИН
+						{% elseif 'ROLE_USER' in user_roles %}
+							Пользователь
+						{% endif %}
+					</span>
+				</div>
+				<div class="frame-elem">
+					<a href="/logout">Выйти</a>
+				</div>
+			</div>
+		{% else %}
+			<div></div>
+			<div class="round_elements_row_frame">
+				<div class="frame-elem">
+					<a href="/login">Войти</a>
+				</div>
+				<div class="frame-elem">
+					<a href="/register">Зарегестрироваться</a>
+				</div>
+			</div>
+
+		{% endif %}
+	</header>
+	<nav>
+		{% if user_roles is defined and user_roles is not null %}
+		<div class="filter-book-uploaders">
+			<span>Вывести книги:
+			</span>
+			<select name="books_uploaders" id="sorting-order-by">
+				<option value="all">Все</option>
+				<option value="user">Опубликованные мной</option>
+				<option value="others">Опубликованные другими</option>
+			</select>
+		</div>
+        {% endif %}
+		<div class="filter-sorting">
+			<span>Сортировать:
+			</span>
+			<select name="orderBy" id="sorting-order-by">
+				<option value="name">Название</option>
+				<option value="author">Автор</option>
+				<option value="upload_date">Дата загрузки</option>
+			</select>
+			<select name="orderRule" id="sorting-order-by">
+				<option value="asc">По возрастанию</option>
+				<option value="desc">По убыванию</option>
+			</select>
+		</div>
+		<div class="filter-name-input">
+			<span>Название:</span>
+			<input type="text" name="filter_name" id="filter-name">
+		</div>
+		<div class="filter-author-input">
+			<span>Автор:</span>
+			<input type="text" name="filter_author" id="filter-author">
+		</div>
+		<div class="filter-pagination-limit">
+			<span>Результатов на странице:</span>
+			<select name="pagination-limit" id="select-pagination-limit">
+				<option value="12">12</option>
+				<option value="24">24</option>
+				<option value="36">36</option>
+			</select>
+		</div>
+		<div id="pagination">
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">3</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">4</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">4</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<main>
+    </main>
+	<footer>
+        <div class="round_elements_row_frame">
+            <div class="frame-elem">
+                <a href="#site-top">Вернуться назад</a>
+            </div>
         </div>
-    {% else %}
-        <p>This is the public view of the main page.</p>
-        <a href="{{ path('app_login') }}">Login to see more options</a>
-    {% endif %}
+	</footer>
+    {{ block ("book_form_modal", "_bookedit.html.twig")}}
+
 {% endblock %}

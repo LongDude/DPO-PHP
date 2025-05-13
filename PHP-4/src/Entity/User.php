@@ -21,9 +21,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface {
     #[Constraints\Email]
     private string $email;
 
-    #[ORM\Column(type: 'string', length: 100, unique: true)]
-    private string $username;
-
     #[ORM\Column(type: 'string', length: 255)]
     #[Constraints\Length(min: 4, minMessage: "Пароль должен состоять минимум из 4 символов")]
     private string $password;
@@ -36,7 +33,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface {
 
     public function getId(): ?int { return $this->id; }
     public function getEmail(): ?string { return $this->email; }
-    public function getUsername(): ?string { return $this->username; }
     public function getPassword(): ?string { return $this->password; }
     public function getRoles(): array { return $this->roles; }
     public function getBooks(): array {return $this->books; }
@@ -44,10 +40,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface {
 
     public function setEmail($email): self {
         $this->email = $email;
-        return $this;
-    }
-    public function setUsername($username): self {
-        $this->username = $username;
         return $this;
     }
     public function setPassword($password): self {
