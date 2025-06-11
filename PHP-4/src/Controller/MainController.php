@@ -28,8 +28,28 @@ class MainController extends AbstractController
     }
 
     #[Route('/book/new', name:'api_book_add', methods: ["POST"])]
-    public function add_book(): JsonResponse {
-        
+    public function add_book(Request $request, BookRepository $bookRepository): JsonResponse {
+        $fileErrors = $bookRepository->addBook(
+            $request->request->get('name'),
+            $request->request->get('author'),
+            $request->files->get('cover') ?? null,
+            $request->files->get('file') ?? null,
+            $this->getUser(),
+            new DateTimeImmutable($request->request->get('read_date')),
+            $request->request->get('allow_download'),
+        );
+        if (count($fileErrors) > 0){
+            return $this->json([
+                'status' => 'error',
+                'message' => 'Book added with errors',
+                'errors' => $fileErrors,
+            ]);
+        }
+        return $this->json([
+            'status' => 'success',
+            'message' => 'Book added successfully',
+            'redirect' => $this->generateUrl('app_root'),
+        ]);
     }
     
     #[Route('/book/{id}', name:'api_book_get', methods: ["GET"])]

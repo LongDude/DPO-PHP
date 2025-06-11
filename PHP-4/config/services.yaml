@@ -1,4 +1,5 @@
 parameters:
+    upload_dir: '%kernel.project_dir%/public/uploads'  # Define the parameter
 
 services:
     _defaults:
@@ -10,3 +11,9 @@ services:
         exclude:
             - '../src/Entity/'
             - '../src/Kernel.php'
+
+    App\Service\FileUploader:
+        bind:
+            $uploadPath: '%upload_dir%'
+
+    App\Repository\BookRepository:

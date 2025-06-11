@@ -2,18 +2,25 @@
 
 namespace App\Repository;
 use App\Service\FileUploader;
+use DateTimeImmutable;
 use DateTimeInterface;
-use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\Tools\Pagination\Paginator;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use App\Entity\Book;
 use App\Entity\User;
-use Exception;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Dotenv\Exception\PathException;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\DependencyInjection\Attribute\Autowire;
 
-class BookRepository extends EntityRepository {
+class BookRepository extends ServiceEntityRepository {
 
+    public function __construct(
+        ManagerRegistry $registry,
+        private FileUploader $uploader,
+    ) {
+        parent::__construct($registry, Book::class);
+    }
 
     /**
      * Возвращает список книг с учетом фильтров и пагинации
@@ -56,17 +63,18 @@ class BookRepository extends EntityRepository {
         ->setAuthor($author)
         ->setUploader($uploader)
         ->setReadDate($read_date)
+        ->setUploadDate(new DateTimeImmutable("now"))
         ->setAllowDownload($allow_download);
 
         $fileErrors = [];
         try {
-            $bookCover && $bookCover->isValid() && FileUploader::saveFile($bookCover, $book);
+            $bookCover && $bookCover->isValid() && $this->uploader->saveFile($bookCover, $book);
         } catch (BadRequestException $e) {
             $fileErrors[] = $e->getMessage();
         } 
 
         try {
-            $bookFile && $bookFile->isValid() && FileUploader::saveFile($bookFile, $book);
+            $bookFile && $bookFile->isValid() && $this->uploader->saveFile($bookFile, $book);
         } catch (BadRequestException $e) {
             $fileErrors[] = $e->getMessage();
         }
@@ -96,7 +104,7 @@ class BookRepository extends EntityRepository {
         $fileErrors = [];
         if (!empty($bookCover)) {
             try {
-                FileUploader::saveFile($bookCover, $book);
+                $this->uploader->saveFile($bookCover, $book);
             } catch (BadRequestException $e) {
                 $fileErrors[] = $e->getMessage();
             }
@@ -104,7 +112,7 @@ class BookRepository extends EntityRepository {
    
         if (!empty($bookFile)) {
             try {
-                FileUploader::saveFile($bookFile, $book);
+                $this->uploader->saveFile($bookFile, $book);
             } catch (BadRequestException $e) {
                 $fileErrors[] = $e->getMessage();
             }

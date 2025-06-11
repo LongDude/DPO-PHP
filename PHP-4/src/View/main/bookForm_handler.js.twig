@@ -53,7 +53,7 @@ function loadBookHandler() {
         }
         
         try {
-            const response = await fetch('', {
+            const response = await fetch('{{ path('api_book_add') }}', {
                 method: 'POST',
                 body: formData,
                 headers: {
