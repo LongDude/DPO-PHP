@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function loadBookHandler() {
     const form = document.getElementById('book-form');
     const coverFile = document.getElementById('coverFile');
     const coverPreview = document.getElementById('cover-preview');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (response.ok) {
                 // Success handling
-                window.location.href = data.redirect || '{{ path('book_index') }}';
+                window.location.href = data.redirect || `{{ path('app_root') }}`;
             } else {
                 // Error handling
                 alert(data.message || 'Error saving book');
@@ -75,4 +75,4 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('An error occurred while saving the book');
         }
     });
-});
+};

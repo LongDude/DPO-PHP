@@ -14,12 +14,18 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class BookRepository extends EntityRepository {
 
+
     /**
      * Возвращает список книг с учетом фильтров и пагинации
      * @return void
      */
-    public function listBooks(){
-        
+    public function listBooks(int $limit, int $offset): array{
+        $query = $this->createQueryBuilder('b')
+            ->select('b')
+            ->orderBy('b.id', 'DESC')
+            ->setFirstResult($offset)
+            ->setMaxResults($limit);
+        return $query->getQuery()->getResult();
     }    
 
     /**
@@ -110,6 +116,7 @@ class BookRepository extends EntityRepository {
         if (!empty($allow_download)) {
             $book->setAllowDownload($allow_download);
         }
+        $this->getEntityManager()->flush();
         return $fileErrors;
     }
 }  

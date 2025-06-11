@@ -5,4 +5,5 @@ document.getElementById("add-book").onclick = () => {
     var clone = form_template.content.cloneNode(true);
     clone.querySelector('h1').innerText = "Добавление книги";
     body.appendChild(clone);
+    loadBookHandler();
 }
