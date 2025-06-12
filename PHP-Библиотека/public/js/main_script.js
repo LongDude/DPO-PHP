@@ -21,8 +21,7 @@ jQuery(function(){
         filterTimeout = setTimeout(updateTable, 500);
     });
 })
-
-
+ 
 function updateTable(offset = 0){
     $('body main #card-table *').remove();
 
@@ -73,6 +72,9 @@ function updateTable(offset = 0){
                         const [d,m,y] = book.readDate.split('-');
                         $('#read_date').val(`${y}-${m}-${d}`);
                         $('#addBookModal-label').text('Редактировать книгу');
+                        if (book.linkCover){
+                            $('#addBookModal #cover-preview').attr('src', `/book/${book.id}/cover`);
+                        }
                         modal.show();
                     })
                     $(card).find('.book-delete-btn').removeAttr('hidden');
