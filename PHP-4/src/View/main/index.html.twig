@@ -14,7 +14,7 @@
 {% block body %}
 	<header id="site-top">
 		{% if user_roles is defined and user_roles is not null %}
-			<button id="add-book">Добавить книгу</button>
+			<button type="button" class="btn btn-info btn-lg addBookButton">Добавить книгу</button>
 			<div class="round_elements_row_frame">
 				<div class="frame-elem">
 					<span class="email">{{user_email}}</span>
@@ -50,7 +50,7 @@
 		<div class="filter-book-uploaders">
 			<span>Вывести книги:
 			</span>
-			<select name="books_uploaders" id="sorting-order-by">
+			<select name="books_uploaders">
 				<option value="all">Все</option>
 				<option value="user">Опубликованные мной</option>
 				<option value="others">Опубликованные другими</option>
@@ -60,12 +60,12 @@
 		<div class="filter-sorting">
 			<span>Сортировать:
 			</span>
-			<select name="orderBy" id="sorting-order-by">
+			<select name="orderBy">
 				<option value="name">Название</option>
 				<option value="author">Автор</option>
 				<option value="upload_date">Дата загрузки</option>
 			</select>
-			<select name="orderRule" id="sorting-order-by">
+			<select name="orderRule">
 				<option value="asc">По возрастанию</option>
 				<option value="desc">По убыванию</option>
 			</select>
@@ -106,8 +106,11 @@
 			</ul>
 		</div>
 	</nav>
-	<main>
-    </main>
+	<main class="container-fluid">
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="card-table">
+			<!-- Тут генерируются карточки -->
+		</div>
+	</main>
 	<footer>
         <div class="round_elements_row_frame">
             <div class="frame-elem">
@@ -116,5 +119,6 @@
         </div>
 	</footer>
     {{ block ("book_form_modal", "_bookedit.html.twig")}}
+    {{ block ("book_card", "main/_card.html.twig")}}
 
 {% endblock %}

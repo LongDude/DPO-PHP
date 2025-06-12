@@ -24,4 +24,5 @@ security:
     access_control:
         - { path: ^/login, roles: PUBLIC_ACCESS }
         - { path: ^/register, roles: PUBLIC_ACCESS }
+        - { path: ^/book/table, roles: PUBLIC_ACCESS }
         - { path: ^/, roles: PUBLIC_ACCESS }

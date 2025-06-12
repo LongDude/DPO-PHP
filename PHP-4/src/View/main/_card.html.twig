@@ -1,0 +1,44 @@
+{% block book_card %}
+    <template id="book-card-template">
+        <div class="col"> 
+        <div class="card h-100">
+            <div class="cover-container" style="height: 200px; overflow: hidden;">
+                <img id="cover-preview" src="https://placehold.co/600x400" class="card-img-top img-fluid h-100" style="object-fit: contain;">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title book-name fw-bold mb-3"></h5>
+
+                <div class="mb-2">
+                    <span class="fw-semibold">Автор:</span>
+                    <span class="card-text book-author"></span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="fw-semibold">Дата публикации:</span>
+                    <span class="card-text book-upload-date"></span>
+                </div>
+
+                <div class="mb-2 book-read-date-container">
+                    <span class="fw-semibold">Дата прочтения:</span>
+                    <span class="card-text book-read-date"></span>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+                <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary btn-sm book-download-btn" target="_blank" rel="noopener noreferrer" hidden>
+                        <i class="bi bi-download"></i> Скачать
+                    </a>
+                    
+                    <a href="#" class="btn btn-outline-secondary btn-sm book-edit-btn" data-bs-toggle="modal" data-bs-target="#addBookModal" hidden>
+                        <i class="bi bi-pencil"></i> Редактировать
+                    </a>
+
+                    <a href="#" class="btn btn-outline-danger btn-sm book-delete-btn" hidden>
+                        <i class="bi bi-trash"></i> Удалить
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </template>
+{% endblock %}

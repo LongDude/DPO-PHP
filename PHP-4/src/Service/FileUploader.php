@@ -16,7 +16,7 @@ class FileUploader {
     const MAX_SIZE = 50_000_000;
 
     public function __construct(
-        #[Autowire('%kernel.project_dir%/public/uploads')]
+        #[Autowire('%kernel.project_dir%/uploads')]
         private string $uploadPath
     ){
         if (!file_exists($this->uploadPath)) {
@@ -26,9 +26,10 @@ class FileUploader {
 
     public function saveFile(
         UploadedFile $file,
-        Book $book,
-        BookFileType $fileType = BookFileType::Unknown,
-    ): void {
+        int $bookId,
+        string $bookName
+    ): string {
+        $fileType = BookFileType::Unknown;
         if (in_array($file->getMimeType(), ['image/jpeg', 'image/png'])){
             $fileType = BookFileType::Cover;
         } elseif ($file->getMimeType() == 'application/pdf'){
@@ -43,12 +44,12 @@ class FileUploader {
 
         // Определяем новое имя файла
         $filename = match($fileType){
-            BookFileType::Cover => $file->getBasename() . $file->getClientOriginalExtension(),
-            BookFileType::File => preg_replace("/[^A-Za-z0-9._-]/", '_', $book->getName()) . "." . $file->getClientOriginalExtension(),
+            BookFileType::Cover => $file->getBasename() .".". $file->getClientOriginalExtension(),
+            BookFileType::File => preg_replace("/[^A-Za-z0-9а-яА-Я._-]/", '_', $bookName) . "." . $file->getClientOriginalExtension(),
         };
 
         // Двухуровневое дерево - максимум 65536 элементов на каталог 
-        $fileId = $book->getId();
+        $fileId = $bookId;
         $clasterId = $fileId % (1 << 16); $fileId >>= 16;
         $bookDirId = $fileId % (1 << 16); $fileId >>= 16;
         $bookRelDir = implode('/', [$clasterId, $bookDirId]);
@@ -62,14 +63,7 @@ class FileUploader {
         $fileRelPath = implode('/', [$bookRelDir, $filename]);
         
         // Записываем новый путь в базу данных
-        switch ($fileType){
-            case BookFileType::Cover:
-                $book->setCoverPath($fileRelPath);
-                break;
-            case BookFileType::File:
-                $book->setFilePath($fileRelPath);
-                break;
-        }
+        return $fileRelPath;
     }
 
     public function loadFile(
@@ -85,6 +79,31 @@ class FileUploader {
         }
 
         return new File($absPath);
+    }
+
+    public function removeFile(
+        string $server_filepath
+    ) :void {
+        $absPath = implode('/', [$this->uploadPath, $server_filepath]);
+        if (!file_exists($absPath)){
+            return;
+        }
+        unlink($absPath);
+    }
+
+    public function removeBookDir(
+        int $bookId
+    ) :void {
+        $fileId = $bookId;
+        $clasterId = $fileId % (1 << 16); $fileId >>= 16;
+        $bookDirId = $fileId % (1 << 16); $fileId >>= 16;
+        $bookRelDir = implode('/', [$clasterId, $bookDirId]);
+        $bookAbsDir = implode('/', [$this->uploadPath, $bookRelDir]);
+        
+        if (is_dir($bookAbsDir)){
+            array_map('unlink', glob("$bookAbsDir/*"));
+            rmdir($bookAbsDir);
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 parameters:
-    upload_dir: '%kernel.project_dir%/public/uploads'  # Define the parameter
+    upload_dir: '%kernel.project_dir%/uploads'  # Define the parameter
 
 services:
     _defaults:

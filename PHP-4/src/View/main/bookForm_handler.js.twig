@@ -1,9 +1,9 @@
-function loadBookHandler() {
+jQuery(function(){
     const form = document.getElementById('book-form');
     const coverFile = document.getElementById('coverFile');
     const coverPreview = document.getElementById('cover-preview');
     const bookFile = document.getElementById('bookFile');
-    
+
     // Preview cover image
     coverFile.addEventListener('change', function(e) {
         const file = e.target.files[0];
@@ -13,31 +13,28 @@ function loadBookHandler() {
                 coverPreview.src = event.target.result;
             };
             reader.readAsDataURL(file);
-            
-            // Update file input label
-            document.querySelector('.custom-file-label[for="coverFile"]').textContent = file.name;
         }
     });
     
-    // Update PDF file input label
-    bookFile.addEventListener('change', function(e) {
-        if (e.target.files[0]) {
-            document.querySelector('.custom-file-label[for="bookFile"]').textContent = e.target.files[0].name;
+    bookFile.addEventListener('change', function(){
+        if (this.files[0].size > 52428800){
+            alert("Максимальный размер файла 50Мб")
+            this.value = ""
         }
-    });
-    
-    // Form submission
+    })
+
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Validate form
         if (!form.checkValidity()) {
             e.stopPropagation();
             form.classList.add('was-validated');
             return;
         }
         
-        // Prepare FormData
+        const bookId =document.getElementById('bookId').value;
+        const isEdit = !!bookId;
+
         const formData = new FormData();
         formData.append('name', document.getElementById('name').value);
         formData.append('author', document.getElementById('author').value);
@@ -53,7 +50,14 @@ function loadBookHandler() {
         }
         
         try {
-            const response = await fetch(`{{ path('api_book_add') }}`, {
+            let url;
+            if (isEdit){
+                url = `{{ path('api_book_edit', {id: 'BOOK_ID'}) }}`.replace('BOOK_ID', bookId);
+            } else {
+                url = `{{ path('api_book_add') }}`;
+            }
+
+            const response = await fetch(url, {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -64,15 +68,14 @@ function loadBookHandler() {
             const data = await response.json();
             
             if (response.ok) {
-                // Success handling
+                alert("Книга успешно сохранена")
                 window.location.href = data.redirect || `{{ path('app_root') }}`;
             } else {
-                // Error handling
-                alert(data.message || 'Error saving book');
+                alert(data.message || 'Ошибка при сохранении книги');
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('An error occurred while saving the book');
+            alert('Ошибка при сохранении книги');
         }
     });
-};
+})

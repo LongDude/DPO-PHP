@@ -4,3 +4,4 @@ bddata
 .env
 vendor/
 var/
+uploads/

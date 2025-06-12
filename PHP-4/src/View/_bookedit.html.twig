@@ -1,68 +1,68 @@
 {% block book_form_modal %}
-	<template>
-		<div class="template-content">
-			<div class="container">
-				<h1>Редактирование книги</h1>
-				<form id="book-form" class="needs-validation" novalidate>
-					<div class="row">
-						<div
-							class="col-md-6">
-							<!-- Text Fields -->
-							<div class="form-group">
-								<label for="name">Book Name*</label>
-								<input type="text" class="form-control" id="name" required>
-								<div class="invalid-feedback">Please provide a book name.</div>
-							</div>
+	<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModal-label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<form id="book-form" class="needs-validation" novalidate>
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="addBookModal-label">Добавление книги</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+					</div>
+					<div class="modal-body">
+						<input type="hidden" id="bookId">
+						<div class="container-fluid">
+							<div class="row row-cols-2">
+								<div class="col-md-6">
+								<div class="form-group">
+									<label for="name">Название книги*</label>
+									<input type="text" class="form-control" id="name" required>
+									<div class="invalid-feedback">Пожалуйста укажите название книги.</div>
+								</div>
 
-							<div class="form-group">
-								<label for="author">Author*</label>
-								<input type="text" class="form-control" id="author" required>
-								<div class="invalid-feedback">Please provide an author.</div>
-							</div>
+								<div class="form-group">
+									<label for="author">Автор</label>
+									<input type="text" class="form-control" id="author">
+								</div>
 
-							<div class="form-group">
-								<label for="read_date">Read Date</label>
-								<input type="date" class="form-control" id="read_date">
-							</div>
+								<div class="form-group">
+									<label for="read_date">Дата прочтения</label>
+									<input type="date" class="form-control" id="read_date">
+								</div>
+								<div class="form-group"> 
+									<label for="bookFile">Книга (PDF)</label>
+									<div class="input-group">
+										<input type="file" class="form-control" id="bookFile" accept="application/pdf">
+									</div>
+								</div>
+								<div class="form-check mb-3">
+									<input type="checkbox" class="form-check-input" id="allow_download">
+									<label class="form-check-label" for="allow_download">Разрешить загрузку остальным</label>
+								</div>
+								</div>
 
-							<!-- PDF File Upload -->
-							<div class="form-group">
-								<label for="bookFile">Book File (PDF)</label>
-								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="bookFile" accept="application/pdf">
-									<label class="custom-file-label" for="bookFile">Choose PDF file</label>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Обложка книги</label>
+										<div class="cover-preview mb-3">
+											<img id="cover-preview" src="https://placehold.co/600x400" class="img-thumbnail" style="max-height: 200px;">
+										</div>
+										<div class="custom-file">
+											<input type="file" class="custom-file-input" id="coverFile" accept="image/png,image/jpeg">
+											<label class="custom-file-label" for="coverFile">Выберите обложку (PNG/JPEG)</label>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="form-check mb-3">
-								<input type="checkbox" class="form-check-input" id="allow_download">
-								<label class="form-check-label" for="allow_download">Allow Download</label>
-							</div>
-						</div>
-
-						<div
-							class="col-md-6">
-							<!-- Cover Image Section -->
-							<div class="form-group">
-								<label>Book Cover</label>
-								<div class="cover-preview mb-3">
-									<img id="cover-preview" src="https://placehold.co/600x400" class="img-thumbnail" style="max-height: 200px;">
-								</div>
-								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="coverFile" accept="image/png,image/jpeg">
-									<label class="custom-file-label" for="coverFile">Choose cover image (PNG/JPEG)</label>
-								</div>
-							</div>
-
 
 						</div>
 					</div>
-
-					<button type="submit" class="btn btn-primary">Save Book</button>
-				</form>
-			</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+						<button type="submit" class="btn btn-primary" id="save-item-btn">Сохранить</button>
+					</div>
+				</div>
+			</form>
 		</div>
-	<script>
-		{% include "main/bookForm_handler.js.twig" %}
-	</script>
-	</template>
-{% endblock %}
+	</div>
+</div>
+<script>
+{% include "main/bookForm_handler.js.twig" %}</script>{% endblock %}
