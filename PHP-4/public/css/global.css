@@ -94,4 +94,7 @@ a:hover {
     border-right: 2px solid var(--color-primary-frame-text);
 }
 
-
+#card-table .col .card {
+    background-color: rgba(251, 220, 147, 0.722);
+    border: 1px solid var(--color-secondary) ;
+}

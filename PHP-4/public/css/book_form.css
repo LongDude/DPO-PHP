@@ -9,9 +9,8 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.template-content > div{
+#book-form > div{
     background-color: var(--color-primary);
-    padding: 30px;
     border-radius: 30px;
 
 }

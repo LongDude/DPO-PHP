@@ -9,7 +9,7 @@ header {
     padding: 8px 10px 12px 10px;
 }
 
-#add-book{
+.addBookButton{
     all:unset;
     background-color: var(--color-primary-frame-main);
     color: var(--color-primary-frame-text);
@@ -18,7 +18,7 @@ header {
     height: 100%;
 }
 
-#add-book:hover{
+.addBookButton:hover{
     background-color: var(--color-primary-frame-hover);
     color: var(--color-primary-frame-text);
     cursor: pointer;
