@@ -1,0 +1,14 @@
+3
+DETAIL
+CART
+CHECKOUT
+9
+user1 DETAIL
+user2 DETAIL
+user1 CART
+user3 DETAIL
+user3 CART
+user1 CHECKOUT
+user4 DETAIL
+user5 DETAIL
+user5 CART

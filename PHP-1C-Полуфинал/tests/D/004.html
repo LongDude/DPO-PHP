@@ -1,0 +1,1304 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>PHP: Hypertext Preprocessor</title>
+
+	<link rel="shortcut icon" href="https://php.net/favicon.ico">
+	<link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+	<link rel="alternate" type="application/atom+xml" href="https://php.net/releases/feed.php" title="PHP Release feed">
+	<link rel="alternate" type="application/atom+xml" href="https://php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+	<link rel="canonical" href="http://php.net/index.php">
+	<link rel="shorturl" href="http://php.net/index">
+	<link rel="alternate" href="http://php.net/index" hreflang="x-default">
+
+
+
+	<link rel="stylesheet" type="text/css" href="/cached.php?t=1539771603&amp;f=/fonts/Fira/fira.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/cached.php?t=1539765004&amp;f=/fonts/Font-Awesome/css/fontello.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/cached.php?t=1540425603&amp;f=/styles/theme-base.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/cached.php?t=1540425603&amp;f=/styles/theme-medium.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/cached.php?t=1429259403&amp;f=/styles/home.css" media="screen">
+
+	<!--skip-delete [if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="https://php.net/styles/workarounds.ie7.css" media="screen">
+	<![endif]-->
+
+	<!--skip-delete [if lte IE 8]>
+	<script data-skip-moving="true">
+		window.brokenIE = true;
+	</script>
+	<![endif]-->
+
+	<!--skip-delete [if lte IE 9]>
+	<link rel="stylesheet" type="text/css" href="https://php.net/styles/workarounds.ie9.css" media="screen">
+	<![endif]-->
+
+	<!--skip-delete [if IE]>
+	<script src="https://php.net/js/ext/html5.js"></script>
+	<![endif]-->
+
+	<base href="https://php.net/index.php">
+
+</head>
+<body class="home ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+	<div class="navbar-inner clearfix">
+		<a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+		<div id="mainmenu-toggle-overlay"></div>
+		<input type="checkbox" id="mainmenu-toggle">
+		<ul class="nav">
+			<li class=""><a href="/downloads">Downloads</a></li>
+			<li class=""><a href="/docs.php">Documentation</a></li>
+			<li class=""><a href="/get-involved" >Get Involved</a></li>
+			<li class=""><a href="/support">Help</a></li>
+		</ul>
+		<form class="navbar-search" id="topsearch" action="/search.php">
+			<input type="hidden" name="show" value="quickref">
+			<input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+		</form>
+	</div>
+	<div id="flash-message"></div>
+</nav>
+<nav id="trick"><div><dl>
+	<dt><a href='/manual/en/getting-started.php'>Getting Started</a></dt>
+	<dd><a href='/manual/en/introduction.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/tutorial.php'>A simple tutorial</a></dd>
+	<dt><a href='/manual/en/langref.php'>Language Reference</a></dt>
+	<dd><a href='/manual/en/language.basic-syntax.php'>Basic syntax</a></dd>
+	<dd><a href='/manual/en/language.types.php'>Types</a></dd>
+	<dd><a href='/manual/en/language.variables.php'>Variables</a></dd>
+	<dd><a href='/manual/en/language.constants.php'>Constants</a></dd>
+	<dd><a href='/manual/en/language.expressions.php'>Expressions</a></dd>
+	<dd><a href='/manual/en/language.operators.php'>Operators</a></dd>
+	<dd><a href='/manual/en/language.control-structures.php'>Control Structures</a></dd>
+	<dd><a href='/manual/en/language.functions.php'>Functions</a></dd>
+	<dd><a href='/manual/en/language.oop5.php'>Classes and Objects</a></dd>
+	<dd><a href='/manual/en/language.namespaces.php'>Namespaces</a></dd>
+	<dd><a href='/manual/en/language.errors.php'>Errors</a></dd>
+	<dd><a href='/manual/en/language.exceptions.php'>Exceptions</a></dd>
+	<dd><a href='/manual/en/language.generators.php'>Generators</a></dd>
+	<dd><a href='/manual/en/language.references.php'>References Explained</a></dd>
+	<dd><a href='/manual/en/reserved.variables.php'>Predefined Variables</a></dd>
+	<dd><a href='/manual/en/reserved.exceptions.php'>Predefined Exceptions</a></dd>
+	<dd><a href='/manual/en/reserved.interfaces.php'>Predefined Interfaces and Classes</a></dd>
+	<dd><a href='/manual/en/context.php'>Context options and parameters</a></dd>
+	<dd><a href='/manual/en/wrappers.php'>Supported Protocols and Wrappers</a></dd>
+</dl>
+	<dl>
+		<dt><a href='/manual/en/security.php'>Security</a></dt>
+		<dd><a href='/manual/en/security.intro.php'>Introduction</a></dd>
+		<dd><a href='/manual/en/security.general.php'>General considerations</a></dd>
+		<dd><a href='/manual/en/security.cgi-bin.php'>Installed as CGI binary</a></dd>
+		<dd><a href='/manual/en/security.apache.php'>Installed as an Apache module</a></dd>
+		<dd><a href='/manual/en/security.sessions.php'>Session Security</a></dd>
+		<dd><a href='/manual/en/security.filesystem.php'>Filesystem Security</a></dd>
+		<dd><a href='/manual/en/security.database.php'>Database Security</a></dd>
+		<dd><a href='/manual/en/security.errors.php'>Error Reporting</a></dd>
+		<dd><a href='/manual/en/security.globals.php'>Using Register Globals</a></dd>
+		<dd><a href='/manual/en/security.variables.php'>User Submitted Data</a></dd>
+		<dd><a href='/manual/en/security.magicquotes.php'>Magic Quotes</a></dd>
+		<dd><a href='/manual/en/security.hiding.php'>Hiding PHP</a></dd>
+		<dd><a href='/manual/en/security.current.php'>Keeping Current</a></dd>
+		<dt><a href='/manual/en/features.php'>Features</a></dt>
+		<dd><a href='/manual/en/features.http-auth.php'>HTTP authentication with PHP</a></dd>
+		<dd><a href='/manual/en/features.cookies.php'>Cookies</a></dd>
+		<dd><a href='/manual/en/features.sessions.php'>Sessions</a></dd>
+		<dd><a href='/manual/en/features.xforms.php'>Dealing with XForms</a></dd>
+		<dd><a href='/manual/en/features.file-upload.php'>Handling file uploads</a></dd>
+		<dd><a href='/manual/en/features.remote-files.php'>Using remote files</a></dd>
+		<dd><a href='/manual/en/features.connection-handling.php'>Connection handling</a></dd>
+		<dd><a href='/manual/en/features.persistent-connections.php'>Persistent Database Connections</a></dd>
+		<dd><a href='/manual/en/features.safe-mode.php'>Safe Mode</a></dd>
+		<dd><a href='/manual/en/features.commandline.php'>Command line usage</a></dd>
+		<dd><a href='/manual/en/features.gc.php'>Garbage Collection</a></dd>
+		<dd><a href='/manual/en/features.dtrace.php'>DTrace Dynamic Tracing</a></dd>
+	</dl>
+	<dl>
+		<dt><a href='/manual/en/funcref.php'>Function Reference</a></dt>
+		<dd><a href='/manual/en/refs.basic.php.php'>Affecting PHP's Behaviour</a></dd>
+		<dd><a href='/manual/en/refs.utilspec.audio.php'>Audio Formats Manipulation</a></dd>
+		<dd><a href='/manual/en/refs.remote.auth.php'>Authentication Services</a></dd>
+		<dd><a href='/manual/en/refs.utilspec.cmdline.php'>Command Line Specific Extensions</a></dd>
+		<dd><a href='/manual/en/refs.compression.php'>Compression and Archive Extensions</a></dd>
+		<dd><a href='/manual/en/refs.creditcard.php'>Credit Card Processing</a></dd>
+		<dd><a href='/manual/en/refs.crypto.php'>Cryptography Extensions</a></dd>
+		<dd><a href='/manual/en/refs.database.php'>Database Extensions</a></dd>
+		<dd><a href='/manual/en/refs.calendar.php'>Date and Time Related Extensions</a></dd>
+		<dd><a href='/manual/en/refs.fileprocess.file.php'>File System Related Extensions</a></dd>
+		<dd><a href='/manual/en/refs.international.php'>Human Language and Character Encoding Support</a></dd>
+		<dd><a href='/manual/en/refs.utilspec.image.php'>Image Processing and Generation</a></dd>
+		<dd><a href='/manual/en/refs.remote.mail.php'>Mail Related Extensions</a></dd>
+		<dd><a href='/manual/en/refs.math.php'>Mathematical Extensions</a></dd>
+		<dd><a href='/manual/en/refs.utilspec.nontext.php'>Non-Text MIME Output</a></dd>
+		<dd><a href='/manual/en/refs.fileprocess.process.php'>Process Control Extensions</a></dd>
+		<dd><a href='/manual/en/refs.basic.other.php'>Other Basic Extensions</a></dd>
+		<dd><a href='/manual/en/refs.remote.other.php'>Other Services</a></dd>
+		<dd><a href='/manual/en/refs.search.php'>Search Engine Extensions</a></dd>
+		<dd><a href='/manual/en/refs.utilspec.server.php'>Server Specific Extensions</a></dd>
+		<dd><a href='/manual/en/refs.basic.session.php'>Session Extensions</a></dd>
+		<dd><a href='/manual/en/refs.basic.text.php'>Text Processing</a></dd>
+		<dd><a href='/manual/en/refs.basic.vartype.php'>Variable and Type Related Extensions</a></dd>
+		<dd><a href='/manual/en/refs.webservice.php'>Web Services</a></dd>
+		<dd><a href='/manual/en/refs.utilspec.windows.php'>Windows Only Extensions</a></dd>
+		<dd><a href='/manual/en/refs.xml.php'>XML Manipulation</a></dd>
+		<dd><a href='/manual/en/refs.ui.php'>GUI Extensions</a></dd>
+	</dl>
+	<dl>
+		<dt>Keyboard Shortcuts</dt><dt>?</dt>
+		<dd>This help</dd>
+		<dt>j</dt>
+		<dd>Next menu item</dd>
+		<dt>k</dt>
+		<dd>Previous menu item</dd>
+		<dt>g p</dt>
+		<dd>Previous man page</dd>
+		<dt>g n</dt>
+		<dd>Next man page</dd>
+		<dt>G</dt>
+		<dd>Scroll to bottom</dd>
+		<dt>g g</dt>
+		<dd>Scroll to top</dd>
+		<dt>g h</dt>
+		<dd>Goto homepage</dd>
+		<dt>g s</dt>
+		<dd>Goto search<br>(current page)</dd>
+		<dt>/</dt>
+		<dd>Focus search box</dd>
+	</dl></div></nav>
+<div id="goto">
+	<div class="search">
+		<div class="text"></div>
+		<div class="results"><ul></ul></div>
+	</div>
+</div>
+
+
+
+<div id="intro" class="clearfix">
+	<div class="container">
+		<div class="row clearfix">
+			<div class="blurb">
+				<p>PHP is a popular general-purpose scripting language that is especially suited to web development.</p>
+				<p>Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+			</div>
+			<div class="download">
+				<h3>Download</h3><ul>
+
+				<li><a class='download-link' href='/downloads.php#v5.6.39'>5.6.39</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-5.php#5.6.39'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration56'>Upgrading</a></li>
+
+				<li><a class='download-link' href='/downloads.php#v7.0.33'>7.0.33</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-7.php#7.0.33'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration70'>Upgrading</a></li>
+
+				<li><a class='download-link' href='/downloads.php#v7.1.25'>7.1.25</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-7.php#7.1.25'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration71'>Upgrading</a></li>
+
+				<li><a class='download-link' href='/downloads.php#v7.2.13'>7.2.13</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-7.php#7.2.13'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration72'>Upgrading</a></li>
+
+				<li><a class='download-link' href='/downloads.php#v7.3.0'>7.3.0</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-7.php#7.3.0'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration73'>Upgrading</a></li>
+			</ul>
+			</div>
+		</div>  </div>
+</div>
+
+
+<div id="layout" class="clearfix">
+	<section id="layout-content">
+		<div class='home-content'><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-12-06T13:00:00+01:00">06 Dec 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-12-06-5" id="id2018-12-06-5">PHP 7.0.33 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>The PHP development team announces the immediate availability of PHP
+						7.0.33. Five security-related issues were fixed in this release.
+						All PHP 7.0 users are encouraged to upgrade to this version.
+					</p>
+
+					<p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+						Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+						The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
+					</p>
+
+					<p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version support timelines</a>,
+						PHP 7.0.33 is the last scheduled release of PHP 7.0 branch. There may be additional release if we discover
+						important security issues that warrant it, otherwise this release will be the final one in the PHP 7.0 branch.
+						If your PHP installation is based on PHP 7.0, it may be a good time to start making the plans for the upgrade
+						to PHP 7.1, PHP 7.2 or PHP 7.3.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-12-06T16:10:25+00:00">06 Dec 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-12-06-4" id="id2018-12-06-4">PHP 7.1.25 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>The PHP development team announces the immediate availability of PHP 7.1.25.
+						This is a security release.</p>
+
+					<p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
+
+					<p>For source downloads of PHP 7.1.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+						Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+						The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.25">ChangeLog</a>.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-12-06T16:09:43+00:00">06 Dec 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-12-06-3" id="id2018-12-06-3">PHP 7.2.13 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>The PHP development team announces the immediate availability of PHP 7.2.13.
+						This is a security release.</p>
+
+					<p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
+
+					<p>For source downloads of PHP 7.2.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+						Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+						The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.13">ChangeLog</a>.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-12-06T06:14:16-08:00">06 Dec 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-12-06-2" id="id2018-12-06-2">PHP 5.6.39 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>The PHP development team announces the immediate availability of PHP
+						5.6.39. This is a security release. Several security bugs have been fixed
+						in this release.
+
+						All PHP 5.6 users are encouraged to upgrade to this version.
+					</p>
+
+					<p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+						Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+						The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
+					</p>
+
+					<p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version
+						support timelines</a>,
+						PHP 5.6.39 is the last scheduled release of PHP 5.6 branch. There may be additional release if we
+						discover
+						important security issues that warrant it, otherwise this release will be the final one in the PHP
+						5.6 branch.
+						If your PHP installation is based on PHP 5.6, it may be a good time to start making the plans for
+						the upgrade
+						to PHP 7.1, PHP 7.2 or PHP 7.3.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-12-06T13:57:53+01:00">06 Dec 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-12-06-1" id="id2018-12-06-1">PHP 7.3.0 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>The PHP development team announces the immediate availability of PHP 7.3.0.
+						This release marks the third feature update to the PHP 7 series.</p>
+
+					<p>PHP 7.3.0 comes with numerous improvements and new features such as</p>
+
+					<ul>
+						<li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.core.heredoc">Flexible Heredoc and Nowdoc Syntax</a></li>
+						<li><a href="http://php.net/manual/migration73.other-changes.php#migration73.other-changes.pcre">PCRE2 Migration</a></li>
+						<li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.mbstring">Multiple MBString Improvements</a></li>
+						<li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.ldap">LDAP Controls Support</a></li>
+						<li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.fpm">Improved FPM Logging</a></li>
+						<li><a href="http://php.net/manual/migration73.windows-support.php#migration73.windows-support.core.file-descriptors">Windows File Deletion Improvements</a></li>
+						<li><a href="http://php.net/manual/migration73.deprecated.php">Several Deprecations</a></li>
+					</ul>
+
+					<p>For source downloads of PHP 7.3.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
+						Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
+						The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.0">ChangeLog</a>.</p>
+
+					<p>The <a href="http://php.net/manual/en/migration73.php">migration guide</a> is available in the PHP Manual.
+						Please consult it for the detailed list of new features and backward incompatible changes.</p>
+
+					<p>Many thanks to all the contributors and supporters!</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-11-22T12:22:47+01:00">22 Nov 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-11-22-1" id="id2018-11-22-1">PHP 7.3.0RC6 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the presumably last PHP 7.3.0 pre-release, PHP 7.3.0RC6.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0RC6 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC6/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0RC6/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC6/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be 7.3.0 (GA), planned for December 6th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/6d9574612d0fb78b8549e42ec096a5a6">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-11-08T15:28:08+00:00">08 Nov 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-11-08-3" id="id2018-11-08-3">PHP 7.1.24 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<h1>PHP 7.1.24 Release Announcement</h1>
+
+					<p>The PHP development team announces the immediate availability of PHP 7.1.24.
+						This is a bugfix release.</p>
+
+					<p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
+
+					<p>For source downloads of PHP 7.1.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+						Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+						The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.24">ChangeLog</a>.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-11-08T11:11:26+01:00">08 Nov 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-11-08-1" id="id2018-11-08-1">PHP 7.3.0RC5 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the next PHP 7.3.0 pre-release, PHP 7.3.0RC5.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0RC5 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC5/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0RC5/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC5/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be RC6, planned for November 22nd.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/a14634afdd52b7f69d65d2bd5a79ac99">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-10-25T11:07:32+02:00">25 Oct 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-10-25-1" id="id2018-10-25-1">PHP 7.3.0RC4 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the next PHP 7.3.0 pre-release, PHP 7.3.0RC4.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0RC4 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC4/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0RC4/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC4/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be RC5, planned for November 8th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/594d9a18290f1b019b2ba68a098413c6">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-10-11T13:47:50+02:00">11 Oct 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-10-11-1" id="id2018-10-11-1">PHP 7.3.0RC3 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the next PHP 7.3.0 pre-release, PHP 7.3.0RC3.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0RC3 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC3/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0RC3/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC3/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be RC4, planned for October 25th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/3b521933b5524c92e880fc96559a5f5c">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-09-28T10:31:16+02:00">28 Sep 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-09-28-1" id="id2018-09-28-1">PHP 7.3.0RC2 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the next PHP 7.3.0 pre-release, PHP 7.3.0RC2.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0RC2 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC2/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0RC2/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC2/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be RC3, planned for October 11th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/ffe9373d127254a19e73e73251e4ff7d">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-09-13T10:57:40+02:00">13 Sep 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-09-13-2" id="id2018-09-13-2">PHP 7.3.0RC1 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the release of the next PHP 7.3.0 pre-release, PHP 7.3.0RC1.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0RC1 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC1/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0RC1/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0RC1/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be RC2, planned for September 27th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/224ae1ef28b1e3f2e0a62a4ab50966e4">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-08-30T17:37:34+02:00">30 Aug 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-08-30-1" id="id2018-08-30-1">PHP 7.3.0.beta3 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the release of the seventh PHP 7.3.0 version, PHP 7.3.0beta3.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0beta3 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0beta3/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0beta3/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0beta3/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be RC1, planned for September 13th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/aeef8c8877a451ba6fce6f990dd3860b">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-08-16T14:11:38+02:00">16 Aug 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-08-16-1" id="id2018-08-16-1">PHP 7.3.0.beta2 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the release of the sixth PHP 7.3.0 version, PHP 7.3.0beta2.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0beta2 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0beta2/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0beta2/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. Internal changes are listed in the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0beta2/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+						These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be Beta 3, planned for August 30th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/4bfd2f4d54ebc01cd37ba3dc86f1f814">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-08-02T11:44:58+02:00">02 Aug 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-08-02-1" id="id2018-08-02-1">PHP 7.3.0.beta1 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the release of the fifth PHP 7.3.0 version, PHP 7.3.0beta1.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0beta1 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0beta1/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0beta1/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be Beta 2, planned for August 16th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/e666c3f1622321f868de9282bee67e43">the manifest</a>
+						or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-07-19T11:02:21+02:00">19 Jul 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-07-19-1" id="id2018-07-19-1">PHP 7.3.0alpha4 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the release of the fourth PHP 7.3.0 version, PHP 7.3.0alpha4.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0alpha4 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0alpha4/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0alpha4/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be Beta 1, planned for August 2nd.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/b30366855341382046687ce7adb20f69">the manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-07-05T11:41:41+02:00">05 Jul 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-07-05-1" id="id2018-07-05-1">PHP 7.3.0 alpha 3 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the release of the third PHP 7.3.0 version, PHP 7.3.0 Alpha 3.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0 Alpha 3 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0alpha3/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0alpha3/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be Beta 1, planned for July 19th.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/e2e76ac0072474b019b0c9f1aef249f1">the manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-06-21T11:46:20+02:00">21 Jun 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-06-21-1" id="id2018-06-21-1">PHP 7.3.0 alpha 2 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP team is glad to announce the release of the second PHP 7.3.0 version, PHP 7.3.0 Alpha 2.
+						The rough outline of the PHP 7.3 release cycle is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.3.0 Alpha 2 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+						Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0alpha2/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0alpha2/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be Alpha 3, planned for July 5.
+					</p>
+
+					<p>
+						The signatures for the release can be found in <a href="https://gist.github.com/cmb69/2c54d0972b296a905062f52c0852e7cb">the manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>
+						Thank you for helping us make PHP better.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-06-07T18:36:37+00:00">07 Jun 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-06-07-1" id="id2018-06-07-1">PHP 7.3.0 alpha 1 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						PHP team is glad to announce the release of the first PHP 7.3.0 version, PHP 7.3.0 Alpha 1.
+						This starts the PHP 7.3 release cycle, the rough outline of which is specified in the
+						<a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+					</p>
+
+					<p>For source downloads of PHP 7.3.0 Alpha 1 please visit the <a href="https://downloads.php.net/~stas/">download page</a>.</p>
+
+					<p>
+						Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+					</p>
+
+					<p>
+						<b>Please DO NOT use this version in production, it is an early test version.</b>
+					</p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.3.0alpha1/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.3.0alpha1/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						The next release would be Alpha 2, planned for June 21.
+					</p>
+
+					<p>The signatures for the release can be found in <a href="https://gist.github.com/smalyshev/b0994d4dd138007237911429702ee040">the manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
+					</p>
+
+					<p>Thank you for helping us make PHP better.</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2018-02-01T09:12:34+00:00">01 Feb 2018</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2018.php#id2018-02-01-1" id="id2018-02-01-1">PHP 7.2.2 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>The PHP development team announces the immediate availability of PHP
+						7.2.2. This is a bugfix release, with several bug fixes included.</p>
+
+					<p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
+
+					<p>For source downloads of PHP 7.2.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+						Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+						The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.2">ChangeLog</a>.
+					</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2017-10-12T11:46:49+02:00">12 Oct 2017</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2017.php#id2017-10-12-1" id="id2017-10-12-1">PHP 7.2.0 Release Candidate 4 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP development team announces the immediate availability of PHP 7.2.0 RC4.
+						This release is the fourth Release Candidate for 7.2.0.
+						All users of PHP are encouraged to test this version carefully, and report any bugs
+						and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
+					</p>
+
+					<p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.2.0RC4/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.2.0RC4/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.2.0 Release Candidate 4 please visit the
+						<a href="https://downloads.php.net/~remi/">download</a> page,
+						Windows sources and binaries can be found at
+						<a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						The next Release Candidate will be announced on the 26th of October.
+						You can also read the full list of planned releases on
+						<a href="https://wiki.php.net/todo/php72">our wiki</a>.
+					</p>
+
+					<p>Thank you for helping us make PHP better.</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2017-09-28T12:58:56+02:00">28 Sep 2017</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2017.php#id2017-09-28-2" id="id2017-09-28-2">PHP 7.2.0 Release Candidate 3 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP development team announces the immediate availability of PHP 7.2.0 RC3.
+						This release is the third Release Candidate for 7.2.0.
+						All users of PHP are encouraged to test this version carefully, and report any bugs
+						and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
+					</p>
+
+					<p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.2.0RC3/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.2.0RC3/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.2.0 Release Candidate 3 please visit the
+						<a href="https://downloads.php.net/~remi/">download</a> page,
+						Windows sources and binaries can be found at
+						<a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						The next Release Candidate will be announced on the 12th of October.
+						You can also read the full list of planned releases on
+						<a href="https://wiki.php.net/todo/php72">our wiki</a>.
+					</p>
+
+					<p>Thank you for helping us make PHP better.</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2017-08-31T10:53:58+02:00">31 Aug 2017</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2017.php#id2017-08-31-1" id="id2017-08-31-1">PHP 7.2.0 Release Candidate 1 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP development team announces the immediate availability of PHP 7.2.0 Release
+						Candidate 1. This release is the first Release Candidate for 7.2.0.
+						All users of PHP are encouraged to test this version carefully, and report any bugs
+						and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
+					</p>
+
+					<p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.2.0RC1/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.2.0RC1/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.2.0 Release Candidate 1 please visit the
+						<a href="https://downloads.php.net/~remi/">download</a> page,
+						Windows sources and binaries can be found at
+						<a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						The second Release Candidate will be released on the 14th of September.
+						You can also read the full list of planned releases on
+						<a href="https://wiki.php.net/todo/php72">our wiki</a>.
+					</p>
+
+					<p>Thank you for helping us make PHP better.</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2017-08-17T10:17:44+02:00">17 Aug 2017</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2017.php#id2017-08-17-1" id="id2017-08-17-1">PHP 7.2.0 Beta 3 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>
+						The PHP development team announces the immediate availability of PHP 7.2.0 Beta 3.
+						This release is the third and final beta for 7.2.0. All users of PHP are encouraged
+						to test this version carefully, and report any bugs and incompatibilities in the
+						<a href="https://bugs.php.net/">bug tracking system</a>.
+					</p>
+
+					<p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>
+
+					<p>
+						For more information on the new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.2.0beta3/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.2.0beta3/UPGRADING">UPGRADING</a>
+						file for a complete list of upgrading notes. These files can also be found in the release archive.
+					</p>
+
+					<p>
+						For source downloads of PHP 7.2.0 Beta 3 please visit the
+						<a href="https://downloads.php.net/~remi/">download</a> page,
+						Windows sources and binaries can be found at
+						<a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+					</p>
+
+					<p>
+						The first Release Candidate will be released on the 31th of August.
+						You can also read the full list of planned releases on
+						<a href="https://wiki.php.net/todo/php72">our wiki</a>.
+					</p>
+
+					<p>Thank you for helping us make PHP better.</p>
+				</div>
+
+			</div>
+		</article><article class="newsentry">
+			<header class="title">
+				<time datetime="2017-07-06T12:25:08+02:00">06 Jul 2017</time>
+				<h2 class="newstitle">
+					<a href="https://php.net/archive/2017.php#id2017-07-06-2" id="id2017-07-06-2">PHP 7.2.0 Alpha 3 Released</a>
+				</h2>
+			</header>
+			<div class="newscontent">
+				<div>
+					<p>The PHP development team announces the immediate availability of PHP 7.2.0 Alpha 3.
+						This release contains fixes and improvements relative to Alpha 2.
+						All users of PHP are encouraged to test this version carefully,
+						and report any bugs and incompatibilities in the
+						<a href="https://bugs.php.net/">bug tracking system</a>.</p>
+
+					<p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>
+
+					<p>For information on new features and other changes, you can read the
+						<a href="https://github.com/php/php-src/blob/php-7.2.0alpha3/NEWS">NEWS</a> file,
+						or the <a href="https://github.com/php/php-src/blob/php-7.2.0alpha3/UPGRADING">UPGRADING</a> file
+						for a complete list of upgrading notes. These files can also be found in the release archive.</p>
+
+					<p>For source downloads of PHP 7.2.0 Alpha 3 please visit the <a href="https://downloads.php.net/~remi/">download</a> page,
+						Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+
+					<p>The first beta will be released on the 20th of July. You can also read the full list of planned releases on our
+						<a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>
+
+					<p>Thank you for helping us make PHP better.</p>
+				</div>
+
+			</div>
+		</article><p class="archive"><a href="/archive/">Older News Entries</a></p></div>    </section><!-- layout-content -->
+
+	<aside class="tips">
+		<div class="inner">
+			<div class="panel">  <a href="/conferences" class="headline" title="Upcoming conferences">Upcoming conferences</a><div class="body"><ul><li><a href='http://php.net/conferences/index.php#id2018-12-15-1' title='SunshinePHP 2019'>SunshinePHP 2019</a></li><li><a href='http://php.net/conferences/index.php#id2018-11-20-2' title='Dutch PHP Conference 2019'>Dutch PHP Conference 2019</a></li><li><a href='http://php.net/conferences/index.php#id2018-10-12-2' title='International PHP Conference 2019 - Spring Edition'>International PHP Conference 2019 - Spring Edition</a></li></ul></div></div><div class="panel">  <a href="/conferences" class="headline" title="Conferences calling for papers">Conferences calling for papers</a><div class="body"><ul><li><a href='http://php.net/conferences/index.php#id2018-12-10-1' title='PHPKonf Istanbul PHP Conference 2019'>PHPKonf Istanbul PHP Conference 2019</a></li><li><a href='http://php.net/conferences/index.php#id2018-11-20-1' title='Dutch PHP Conference - CfP is open!'>Dutch PHP Conference - CfP is open!</a></li></ul></div></div>
+			<p class='panel'><a href='/cal.php'>User Group Events</a></p>
+			<p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
+			<p class='panel social-media'>
+				<span class='headline'>Social media</span>
+			<div class='body'>
+				<ul>
+					<li>
+						<a href="https://twitter.com/official_php">
+							<i class="icon-twitter"></i>
+							@official_php
+						</a>
+					</li>
+				</ul>
+			</div>
+			</p>
+		</div>
+	</aside>
+
+</div><!-- layout -->
+
+<footer>
+	<div class="container footer-content">
+		<div class="row-fluid">
+			<ul class="footmenu">
+				<li><a href="/copyright.php">Copyright &copy; 2001-2018 The PHP Group</a></li>
+				<li><a href="/my.php">My PHP.net</a></li>
+				<li><a href="/contact.php">Contact</a></li>
+				<li><a href="/sites.php">Other PHP.net sites</a></li>
+				<li><a href="/mirrors.php">Mirror sites</a></li>
+				<li><a href="/privacy.php">Privacy policy</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<div class='elephpants'><div class=images></div></div>
+<!-- External and third party libraries. -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/modernizr.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/hogan-2.0.0.min.js"></script>
+<script data-skip-moving="false" src="/cached.php?t=1421837618&amp;f=/js/ext/typeahead.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/mousetrap.min.js" data-skip-moving="false"></script>
+<script data-skip-moving="true" src="/cached.php?t=1421837618&amp;f=/js/search.js"></script>
+<script src="/cached.php?t=1539765004&amp;f=/js/common.js" data-skip-moving="true"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
+
+</body>
+</html>

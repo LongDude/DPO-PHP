@@ -1,0 +1,25 @@
+3
+SEARCH
+CLICK
+BUY
+20
+user1 SEARCH
+user2 SEARCH
+user1 SEARCH
+user1 CLICK
+user2 SEARCH
+user3 SEARCH
+user2 CLICK
+user3 SEARCH
+user3 CLICK
+user6 SEARCH
+user1 SEARCH
+user1 CLICK
+user7 SEARCH
+user1 CLICK
+user1 BUY
+user4 SEARCH
+user5 SEARCH
+user5 SEARCH
+user4 SEARCH
+user8 SEARCH
